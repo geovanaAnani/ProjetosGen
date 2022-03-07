@@ -1,23 +1,15 @@
 package classe
 
-data class Cliente constructor(val nome : String) {
+data class Cliente constructor(private val nome : String) {
 
     //Atributos
 
 
-     var endereco = ""
-     var telefone = ""
-    var listaDeCompras = mutableListOf<String>()
+    private var endereco = ""
+    private var telefone = ""
 
+     var listaDeCompras = mutableListOf<String>()
 
-     init {
-         if(nome.isEmpty()){
-             throw Exception("Classe sendo instanciada de maneira incorreta!")
-         }else{
-             println("Classe instanciada!")
-         }
-
-     }
 
 
     //Metodos
@@ -48,9 +40,12 @@ data class Cliente constructor(val nome : String) {
      fun removeLista (i: String) {
          if (i.isEmpty()){
          println("Esse item esta vazio")
-     }else {
-         listaDeCompras.remove(i)
-         println("Item $i removido com sucesso!")
+     }else if (listaDeCompras.contains(i))
+     {
+             listaDeCompras.remove(i)
+             println("Item $i removido com sucesso!")
+     }else{
+         println("O item $i não existe na lista!")
      }
    }
 
@@ -59,7 +54,9 @@ data class Cliente constructor(val nome : String) {
          println("Sua lista ainda esta vazia!")
          }
          else {
-         println(listaDeCompras) }
+         listaDeCompras.forEach() {
+             println(it)
+         }}
      }
 
      override fun toString(): String {
@@ -71,7 +68,14 @@ data class Cliente constructor(val nome : String) {
                  "---------Lista----------"
      }
 
+    init {
+        if(nome.isEmpty()){
+            throw Exception("Classe sendo instanciada de maneira incorreta!")
+        }else{
+            println("Classe instanciada!")
+        }
 
+    }
 
 
 

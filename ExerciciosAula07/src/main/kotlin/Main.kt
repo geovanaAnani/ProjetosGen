@@ -1,30 +1,17 @@
 import classe.Cliente
 
 fun main(){
-
- val cliente = Cliente ("Geovana")
-/*
- try { val cliente = classe.Cliente ("")
- }catch (e: Exception){
-  println(e.message)
-
- */
-
-
-
-    println("${cliente.nome}, Digite aqui seu endereço: ")
+    val cliente = Cliente("Geovana")
     try {
-     cliente.endereco = readLine()!!}
-    catch (e: Exception){
-      println(e.message)}
+ val cliente = Cliente ("Geovana")}
+        catch (e: Exception){
+            println(e.message)}
 
+    println("Digite aqui seu endereço: ")
+    val endereco = readLine()!!
 
-    println("${cliente.nome}, Digite aqui seu telefone: ")
-   try {
-    cliente.telefone = readLine()!!}
-   catch (e: Exception){
-    println(e.message)}
-
+    println("Digite aqui seu telefone: ")
+    val telefone = readLine()!!
 
 
    cliente.addlista("macarão")
@@ -34,22 +21,4 @@ fun main(){
     println(cliente)
    cliente.listaCompras()
 
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-

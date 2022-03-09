@@ -1,0 +1,1 @@
+C:\Users\usuario\IdeaProjects\JUnit5\build\classes\kotlin\main\MainKt.class;C:\Users\usuario\IdeaProjects\JUnit5\build\classes\kotlin\main\calc\Calculadora$Companion.class;C:\Users\usuario\IdeaProjects\JUnit5\build\classes\kotlin\main\calc\Calculadora.class;C:\Users\usuario\IdeaProjects\JUnit5\build\classes\kotlin\main\client\Cliente.class
